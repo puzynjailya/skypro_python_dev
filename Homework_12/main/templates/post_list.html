@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все посты найденные по запросу "{{target}}"</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<main>
+
+    <a href="/" class="link">Назад</a>
+
+    <h1>Посты по запросу "{{target}}"</h1>
+    <div class="post">
+        {% for data in match_list %}
+        <img src={{data['pic']}} width="100%" alt="">
+        <p> {{data['content']}} </p>
+        {% endfor %}
+    </div>
+    <hr>
+
+    <a href="/post" class="button">Добавить пост</a>
+
+</main>
+</body>
+</html>

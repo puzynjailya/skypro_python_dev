@@ -1,0 +1,3 @@
+class UploadedFileFormatError(Exception):
+
+    pass
